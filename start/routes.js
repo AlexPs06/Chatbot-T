@@ -20,7 +20,7 @@ Route.group(() =>{
   Route.get('hola','ChatbotController.index')
   Route.post('archivo','ChatbotController.archivoInicial')
   Route.get('archivo','ChatbotController.obtenerArchivoInicial')
-  Route.post('pregunta','ChatbotController.preguntar')
+  Route.post('preguntar','ChatbotController.preguntar')
 
 
 } ).prefix('chatbot')

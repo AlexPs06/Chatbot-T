@@ -1,1 +1,1 @@
-{"prueba":"esto es una prueba","nombre":"esto es una prueba de nombre","tipo":"esto es una prueba de tipo"}
+{"prueba":"esto es una prueba","nombre":"CHATBOT-T","tipo":"esto es una prueba de tipo"}
