@@ -3,23 +3,6 @@ var fs = require('fs')
 var AIMLInterpreter = require('AIMLInterpreter')
 
 
-
-
-
-// let leerArchivo = new Promise( archivo =>{
-//     let texto;
-//      fs.readFile('config.txt', 'utf-8', (err, data) => {
-//         if(err) {
-//           console.log('soy error');
-
-//           console.log('error: ', err);
-//           archivo(false)
-//         } else {
-//           texto = JSON.parse(data) 
-//           archivo((texto))
-//         }
-//       });
-// })
 let aiml 
 var aimlInterpreter = new AIMLInterpreter({name:'WireInterpreter', age:'42'}); 
 
@@ -35,7 +18,6 @@ function leerArchivo (){
             } else {
               texto = JSON.parse(data) 
               aiml=texto
-
               archivo((texto))
             } 
           });
@@ -82,7 +64,6 @@ class ChatbotController {
         const archivo = request.only(['pregunta'] )
         if(archivo.pregunta ==null){
             return response.status(404).json({data:'Sin pregunta'})
-
         }
         let respuesta = await this.hacerPregunta(archivo)
         return response.json(respuesta)
