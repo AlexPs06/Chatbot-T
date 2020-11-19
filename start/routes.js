@@ -17,12 +17,13 @@
 const Route = use('Route')
 
 Route.group(() =>{
+  //Primer parámetro es la ruta, el segundo parámetro es la función que corresponde la ruta.
   Route.get('hola','ChatbotController.index')
   Route.post('archivo','ChatbotController.archivoInicial')
   Route.get('archivo','ChatbotController.obtenerArchivoInicial')
   Route.post('preguntar','ChatbotController.preguntar')
 
-
+// Prefix dice a quién le pertenece las rutas
 } ).prefix('chatbot')
 
 

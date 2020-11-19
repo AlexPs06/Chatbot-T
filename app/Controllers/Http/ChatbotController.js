@@ -29,10 +29,10 @@ leerArchivo().then( function(){
     aimlInterpreter.loadAIMLFilesIntoArray([String(aiml.archivo)]);
 })
 
-
-
  
 let respuesta;
+
+//Clase ChatbotController
 class ChatbotController {
     async index({response}){
         let hola = {tipo:"negro"}
