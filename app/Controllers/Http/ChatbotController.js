@@ -5,6 +5,7 @@ var AIMLInterpreter = require('AIMLInterpreter')
 
 let aiml 
 var aimlInterpreter = new AIMLInterpreter({name:'WireInterpreter', age:'42'}); 
+// aimlInterpreter.loadAIMLFilesIntoArray(['test.aiml.xml']);
 
 function leerArchivo (){
     return new Promise( archivo =>{
@@ -12,7 +13,6 @@ function leerArchivo (){
          fs.readFile('config.txt', 'utf-8', (err, data) => {
             if(err) {
               console.log('soy error');
-
               console.log('error: ', err);
               archivo(false)
             } else {
@@ -25,7 +25,7 @@ function leerArchivo (){
 };
 
 leerArchivo().then( function(){
-    aimlInterpreter= new AIMLInterpreter({name:'WireInterpreter', age:'43'});        
+    aimlInterpreter= new AIMLInterpreter({name:String(aiml.nombre), age:'43'});        
     aimlInterpreter.loadAIMLFilesIntoArray([String(aiml.archivo)]);
 })
 
@@ -36,7 +36,6 @@ let respuesta;
 class ChatbotController {
     async index({response}){
         let hola = {tipo:"negro"}
-        
         return response.json(hola)
     }
 
@@ -71,8 +70,7 @@ class ChatbotController {
 
     hacerPregunta(archivo){
         return new Promise( response =>{
-            
-            aimlInterpreter.findAnswerInLoadedAIMLFiles(String(archivo.preguntar), this.callback);
+            aimlInterpreter.findAnswerInLoadedAIMLFiles(String(archivo.pregunta), this.callback);
             
             response(respuesta)
         })
