@@ -1,1 +1,1 @@
-{"prueba":"esto es una prueba","nombre":"CHATBOT-T","archivo":"test.aiml.xml"}
+{"prueba":"esto es una prueba fidel","nombre":"CHATBOT-T","archivo":"test.aiml.xml"}
