@@ -1,0 +1,158 @@
+<!-- 
+    Proyecto Chatbot-T    
+    Elaborado por:
+    José Fidel Urquiza Yllescas
+    Luis Alejandro Pérez Sarmiento
+ -->
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml>
+
+    <category>
+        <pattern>NÚMERO DE CASOS CONFIRMADOS</pattern>
+        <template>El acumulado es: 1,193,255</template>
+    </category>
+    <category>
+        <pattern>NÚMERO DE CASOS NEGATIVOS</pattern>
+        <template>El acumulado es: 1,472,266</template>
+    </category>
+    <category>
+        <pattern>NÚMERO DE CASOS SOSPECHOSOS</pattern>
+        <template>El acumulado es: 88,192</template>
+    </category>
+    <category>
+        <pattern>NÚMERO DE DEFUNCIONES ESTIMADAS</pattern>
+        <template>Son: 127,201</template>
+    </category>
+    <category>
+        <pattern>NÚMERO DE DEFUNCIONES</pattern>
+        <template>El acumulado es: 110,874</template>
+    </category>
+    <category>
+        <pattern>NÚMERO DE CASOS ACTIVOS</pattern>
+        <template>Son: 54,131</template>
+    </category>
+    <category>
+        <pattern>NÚMERO DE CASOS ACTIVOS ESTIMADOS</pattern>
+        <template>Son: 71,323</template>
+    </category>
+    <category>
+        <pattern>NÚMERO DE RECUPERADOS</pattern>
+        <template>Son: 881.050</template>
+    </category>
+    <category>
+        <pattern>NÚMERO DE DEFUNCIONES</pattern>
+        <template>El acumulado es: 110,874</template>
+    </category>
+    <category>
+        <pattern>NÚMERO DE DEFUNCIONES ESTIMADAS</pattern>
+        <template>Son: 127,201</template>
+    </category>
+    <category>
+        <pattern>CASOS MUJERES</pattern>
+        <template>Son: 49.30%</template>
+    </category>
+    <category>
+        <pattern>CASOS HOMBRES</pattern>
+        <template>Son: 50.70%</template>
+    </category>
+
+</aiml>
+
+
+<!-- ¿Cuántos pacientes ingresados fueron dados de alta?
+a)Por edad:
+Mayor a
+Menor a
+b) Por rango de edad: edad inicial a edad final
+c)Por genero
+d)Por entidad
+e)Por Municipio
+f)Lengua indígena
+
+¿Cuántos pacientes ingresados fallecieron?
+a)Por edad:
+Mayor a
+Menor a
+b) Por rango de edad: edad inicial a edad final
+c)Por genero
+d)Por entidad
+e)Por Municipio
+f)Lengua indígena
+
+¿Cuántos pacientes ingresados fueron diagnosticados con?
+a)Neumonía
+b)inmusupr
+c)otro_caso
+
+¿Cuántos pacientes ingresados fueron a la Unidad de Cuidados Intensivos?
+a)Por edad:
+Mayor a
+Menor a
+b) Por rango de edad: edad inicial a edad final
+c)Por genero
+d)Por entidad
+e)Por Municipio
+f)Lengua indígena
+
+¿Cuántos pacientes ingresados tienen antecedentes de?
+a)Diabetes
+a)Por edad:
+Mayor a
+Menor a
+b) Por rango de edad: edad inicial a edad final
+c)Por genero
+b)EPOC
+a)Por edad:
+Mayor a
+Menor a
+b) Por rango de edad: edad inicial a edad final
+c)Por genero
+c)Asma
+a)Por edad:
+Mayor a
+Menor a
+b) Por rango de edad: edad inicial a edad final
+c)Por genero
+d)Hipertensión
+a)Por edad:
+Mayor a
+Menor a
+b) Por rango de edad: edad inicial a edad final
+c)Por genero
+e)Cardiovascular
+a)Por edad:
+Mayor a
+Menor a
+b) Por rango de edad: edad inicial a edad final
+c)Por genero
+f)Renal_Crónica
+a)Por edad:
+Mayor a
+Menor a
+b) Por rango de edad: edad inicial a edad final
+c)Por genero
+g)Embarazo
+a)Por edad:
+Mayor a
+Menor a
+b) Por rango de edad: edad inicial a edad final
+c)Por genero
+Sergio V. Chapa Vergara y Rocío Revilla Aquino !18
+h)Obesidad
+a)Por edad:
+Mayor a
+Menor a
+b) Por rango de edad: edad inicial a edad final
+c)Por genero
+i)Tabaquismo
+a)Por edad:
+Mayor a
+Menor a
+b) Por rango de edad: edad inicial a edad final
+c)Por genero
+
+¿Cuántos pacientes ingresados son?
+a)Migrantes
+b)Otra Nacionalidad
+c)Comunidad Indígena -->
+
