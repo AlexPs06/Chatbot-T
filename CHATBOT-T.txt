@@ -1,1 +1,1 @@
-{"prueba":"esto es una prueba","nombre":"CHATBOT-T","archivo":"jokes"}
+{"prueba":"esto es una prueba","nombre":"CHATBOT-T","archivo":"covid.aiml"}

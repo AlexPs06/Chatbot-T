@@ -35,7 +35,7 @@ let respuesta;
 //Clase ChatbotController
 class ChatbotController {
     async index({response}){
-        let hola = {tipo:"negro"}
+        let hola = {tipo:"hola"}
         return response.json(hola)
     }
 
