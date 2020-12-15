@@ -22,6 +22,7 @@ Route.group(() =>{
   Route.post('archivo','ChatbotController.archivoInicial')
   Route.get('archivo','ChatbotController.obtenerArchivoInicial')
   Route.post('preguntar','ChatbotController.preguntar')
+  Route.get('entrenar','ChatbotController.actualizarChatbot')
 
 // Prefix dice a quién le pertenece las rutas
 } ).prefix('chatbot')

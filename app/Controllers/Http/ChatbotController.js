@@ -1,13 +1,15 @@
 'use strict'
 var fs = require('fs')
+const path = require('path')
+
 var AIMLInterpreter = require('AIMLInterpreter')
 
 
-let aiml 
-var aimlInterpreter = new AIMLInterpreter({name:'WireInterpreter', age:'42'}); 
+let aiml = null
+var aimlInterpreter=null //= new AIMLInterpreter({name:'WireInterpreter', age:'42'}); 
 // aimlInterpreter.loadAIMLFilesIntoArray(['test.aiml.xml']);
 
-function leerArchivo (){
+function leerArchivoConfiguracion (){
     return new Promise( archivo =>{
         let texto;
          fs.readFile('config.txt', 'utf-8', (err, data) => {
@@ -24,9 +26,9 @@ function leerArchivo (){
     })
 };
 
-leerArchivo().then( function(){
+leerArchivoConfiguracion().then( function(){
     aimlInterpreter= new AIMLInterpreter({name:String(aiml.nombre), age:'43'});        
-    aimlInterpreter.loadAIMLFilesIntoArray([String(aiml.archivo)]);
+    // aimlInterpreter.loadAIMLFilesIntoArray([String(aiml.archivo)]);
 })
 
  
@@ -49,15 +51,60 @@ class ChatbotController {
         return response.status(200).json(archivo)
     }
     async obtenerArchivoInicial({response}){
-        if(aiml == false){
+        if(aiml == null){
             return response.status(404).json({data:'Sin archivo inicial'})
         }
         let archivo = await this.leerArchivo()
         return response.json(archivo)
     }
     
+    async actualizarChatbot({request,response}){
+
+        var data = []
+        const directoryPath = "C:\\Users\\luis_\\Documents\\Maestria\\inteligencia artificial\\CHATBOT-T\\api\\admin\\apiAdmin\\archivosAIML"//cambiar url a donde se ubique la base de conocimientos 
+
+        try {
+            var ls=fs.readdirSync(directoryPath);
+
+            for (let index = 0; index < ls.length; index++) {
+                
+                const file = path.join(directoryPath, ls[index]);
+                var dataFile =null;
+                try{
+                    dataFile = fs.lstatSync(file);
+                }catch(e){
+                    return response
+                    .status(err.status)
+                    .send(err)
+                }
+                if(dataFile){
+                    data.push({
+                        path: file,
+                        isDirectory: dataFile.isDirectory(),
+                        length: dataFile.size,
+                        name: ls[index]
+                    });
+                }
+            }
+
+            for (let i = 0; i < data.length; i++) {
+                aimlInterpreter.loadAIMLFilesIntoArray([String(data[i].path)]);
+            }
+
+            return response.json("Termine el entrenamiento");
+            
+
+        } catch (err) {
+            return response
+            .status(err.status)
+            .send(err)
+        }
+
+    }
+
+
     async preguntar({request,response}){
-        if(aiml == false){
+        if(aiml == null){
             return response.status(404).json({data:'Sin archivo inicial'})
         }
         const archivo = request.only(['pregunta'] )
