@@ -61,9 +61,10 @@ class ChatbotController {
     async actualizarChatbot({request,response}){
 
         var data = []
-        const directoryPath = "C:\\Users\\luis_\\Documents\\Maestria\\inteligencia artificial\\CHATBOT-T\\api\\admin\\apiAdmin\\archivosAIML"//cambiar url a donde se ubique la base de conocimientos 
+        
+        const directoryPath = "C:\\Users\\luis_\\Documents\\maestria\\Inteligencia artificial\\APIAdministrador\\archivosAIML"//cambiar url a donde se ubique la base de conocimientos 
 
-        try {
+        try { 
             var ls=fs.readdirSync(directoryPath);
 
             for (let index = 0; index < ls.length; index++) {
@@ -96,7 +97,7 @@ class ChatbotController {
 
         } catch (err) {
             return response
-            .status(err.status)
+            .status(400)
             .send(err)
         }
 
